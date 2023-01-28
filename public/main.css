@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@700&display=swap");
+
+:root {
+  --primary: rgb(232, 107, 107);
+  --secondary: rgb(215, 159, 74);
+  --tertiary: rgb(120, 118, 234);
+  --text: #2b2a35;
+  --discord: #5275ff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+a {
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  font-family: "Rubik Mono One", sans-serif;
+  margin-bottom: 0.3em;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  font-family: "Rubik Mono One", sans-serif;
+  margin-bottom: 0.3em;
+  word-spacing: -0.4em;
+}
+
+p,
+a {
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 10px;
+}

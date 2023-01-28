@@ -1,0 +1,140 @@
+---
+import Button from "../components/button.astro";
+import DiscordLogo from "../components/discord-logo.astro";
+import NotionLogo from "../components/notion-logo.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="main.css" />
+    <title>Astro</title>
+  </head>
+  <body>
+    <header>
+      <h4>Commerce</h4>
+      <div class="header-actions">
+        <Button noPadding noShadow href={""}>
+          <div class="header-button-content">
+            <NotionLogo class="header-button-logo" size={20} />
+            <h4 class="mb-0">see our roadmap</h4>
+          </div>
+        </Button>
+        <Button color={"var(--discord)"} noPadding noShadow>
+          <div class="header-button-content">
+            <DiscordLogo class="header-button-logo" size={20} />
+            <h4 class="mb-0">join our discord</h4>
+          </div>
+        </Button>
+      </div>
+    </header>
+    <main>
+      <h1 class="title">
+        Community Driven <span class="underline">Commerce</span>
+      </h1>
+      <p>
+        Commerce is the world's hub for hobbies and their aftermarkets. It
+        connects people to communities where they can interact, build
+        relationships, and transact safely.
+      </p>
+      <div class="actions">
+        <Button>
+          <NotionLogo class="action-button-logo" />
+          <h3 class="mb-0">see our roadmap</h3>
+        </Button>
+        <Button color={"var(--discord)"}>
+          <DiscordLogo class="action-button-logo" />
+          <h3 class="mb-0">join our discord</h3>
+        </Button>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(
+        to top right,
+        var(--primary) 30%,
+        var(--secondary) 50%,
+        var(--tertiary) 70%
+      )
+      no-repeat;
+  }
+
+  header {
+    background-color: white;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    border-bottom: 4px solid var(--text);
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 0.2em;
+  }
+
+  .header-button-content {
+    display: flex;
+    padding: 0.2em 0.2em;
+    gap: 0.5em;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 700px) {
+    .header-actions {
+      display: none;
+    }
+  }
+
+  header h4,
+  header a {
+    margin: 0;
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .title {
+    max-width: 100%;
+    width: 600px;
+  }
+
+  p {
+    max-width: 100%;
+    width: 600px;
+    font-size: 1.3em;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.5em;
+    column-gap: 1em;
+  }
+
+  .action-button-logo {
+    margin-right: 1em;
+  }
+</style>
