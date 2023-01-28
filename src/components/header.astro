@@ -1,0 +1,73 @@
+---
+import Button from "./button.astro";
+import DiscordLogo from "./discord-logo.astro";
+import NotionLogo from "./notion-logo.astro";
+---
+
+<header>
+  <h4>Commerce</h4>
+  <div class="header-actions">
+    <Button
+      noPadding
+      noShadow
+      href="https://www.notion.so/Commerce-2952bdbf41e843ed8c40f20fd254a172"
+      borderRadius="8px"
+    >
+      <div class="header-button-content">
+        <NotionLogo class="header-button-logo" size={20} />
+        <h4 class="mb-0">learn about us</h4>
+      </div>
+    </Button>
+    <Button
+      color={"var(--discord)"}
+      noPadding
+      noShadow
+      href="https://discord.gg/6f7cKxJF"
+      borderRadius="8px"
+    >
+      <div class="header-button-content">
+        <DiscordLogo class="header-button-logo" size={20} />
+        <h4 class="mb-0">join our discord</h4>
+      </div>
+    </Button>
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: white;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    border-bottom: 4px solid var(--text);
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 0.2em;
+  }
+
+  .header-button-content {
+    display: flex;
+    padding: 0.2em 0.2em;
+    gap: 0.5em;
+    align-items: center;
+  }
+
+  header h4,
+  header a {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 700px) {
+    header {
+      padding: 0.5em;
+    }
+
+    .header-actions {
+      display: none;
+    }
+  }
+</style>

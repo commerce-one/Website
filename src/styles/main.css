@@ -78,18 +78,43 @@ h3 {
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   h2 {
-    font-size: 1.4em;
+    font-size: 1.8em;
   }
 
   h3 {
+    font-size: 1.3em;
+  }
+
+  .underline {
+    text-decoration-thickness: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    word-spacing: -0.6em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
     font-size: 1em;
   }
 
-  a {
+  h3 {
     font-size: 0.8em;
+  }
+
+  .underline {
+    text-decoration-thickness: 5px;
   }
 }

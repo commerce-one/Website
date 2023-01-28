@@ -1,8 +1,7 @@
 ---
-import Button from "../components/button.astro";
-import DiscordLogo from "../components/discord-logo.astro";
-import NotionLogo from "../components/notion-logo.astro";
 import "../styles/main.css";
+import Header from "../components/header.astro";
+import Landing from "../sections/landing.astro";
 ---
 
 <html lang="en">
@@ -14,56 +13,8 @@ import "../styles/main.css";
     <title>Astro</title>
   </head>
   <body>
-    <header>
-      <h4>Commerce</h4>
-      <div class="header-actions">
-        <Button
-          noPadding
-          noShadow
-          href="https://www.notion.so/Commerce-2952bdbf41e843ed8c40f20fd254a172"
-          borderRadius="8px"
-        >
-          <div class="header-button-content">
-            <NotionLogo class="header-button-logo" size={20} />
-            <h4 class="mb-0">learn about us</h4>
-          </div>
-        </Button>
-        <Button
-          color={"var(--discord)"}
-          noPadding
-          noShadow
-          href="https://discord.gg/6f7cKxJF"
-          borderRadius="8px"
-        >
-          <div class="header-button-content">
-            <DiscordLogo class="header-button-logo" size={20} />
-            <h4 class="mb-0">join our discord</h4>
-          </div>
-        </Button>
-      </div>
-    </header>
-    <main>
-      <h1 class="title">
-        Community Driven <span class="underline">Commerce</span>
-      </h1>
-      <p>
-        Commerce is the world's hub for hobbies and their aftermarkets. It
-        connects people to communities where they can interact, build
-        relationships, and transact safely.
-      </p>
-      <div class="actions">
-        <Button
-          href="https://www.notion.so/Commerce-2952bdbf41e843ed8c40f20fd254a172"
-        >
-          <NotionLogo class="action-button-logo" />
-          <h3 class="mb-0">learn about us</h3>
-        </Button>
-        <Button color={"var(--discord)"} href="https://discord.gg/6f7cKxJF">
-          <DiscordLogo class="action-button-logo" />
-          <h3 class="mb-0">join our discord</h3>
-        </Button>
-      </div>
-    </main>
+    <Header />
+    <Landing />
   </body>
 </html>
 
@@ -84,68 +35,6 @@ import "../styles/main.css";
       no-repeat;
   }
 
-  header {
-    background-color: white;
-    height: 3em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1em;
-    border-bottom: 4px solid var(--text);
-  }
-
-  .header-actions {
-    display: flex;
-    gap: 0.2em;
-  }
-
-  .header-button-content {
-    display: flex;
-    padding: 0.2em 0.2em;
-    gap: 0.5em;
-    align-items: center;
-  }
-
-  header h4,
-  header a {
-    margin: 0;
-  }
-
-  main {
-    flex-grow: 1;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    overflow: scroll;
-  }
-
-  .title {
-    max-width: 100%;
-    width: 600px;
-  }
-
-  p {
-    max-width: 100%;
-    width: 600px;
-    margin-bottom: 2em;
-  }
-
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 0.5em;
-    column-gap: 1em;
-  }
-
-  .action-button-logo {
-    margin-right: 1em;
-  }
-
   @media screen and (max-width: 700px) {
     body {
       background: linear-gradient(
@@ -155,14 +44,6 @@ import "../styles/main.css";
           var(--tertiary) 70%
         )
         no-repeat;
-    }
-
-    main {
-      padding: 1em;
-    }
-
-    .header-actions {
-      display: none;
     }
   }
 </style>

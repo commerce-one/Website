@@ -47,11 +47,21 @@ const {
   }
 
   .withPadding {
-    padding: 0.5em 1em;
+    padding: 0.3em 0.5em;
   }
 
   .withShadow:active {
     box-shadow: 0px 0px 0px var(--text);
     transform: translate(var(--shadow-height), var(--shadow-height));
+  }
+
+  @media screen and (max-width: 700px) {
+    .withPadding {
+      padding: 0.1em 0.3em;
+    }
+
+    a {
+      --shadow-height: 2px;
+    }
   }
 </style>

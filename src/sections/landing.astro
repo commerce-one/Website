@@ -1,0 +1,132 @@
+---
+import Button from "../components/button.astro";
+import DiscordLogo from "../components/discord-logo.astro";
+import NotionLogo from "../components/notion-logo.astro";
+---
+
+<main>
+  <div class="content">
+    <h1 class="title">
+      Community Driven <span class="underline">Commerce</span>
+    </h1>
+    <p>
+      Commerce is the world's hub for hobbies and their aftermarkets. It
+      connects people to communities where they can interact, build
+      relationships, and transact safely.
+    </p>
+    <div class="actions">
+      <Button
+        href="https://www.notion.so/Commerce-2952bdbf41e843ed8c40f20fd254a172"
+      >
+        <NotionLogo size={25} class="action-button-logo" />
+        <h3 class="mb-0">learn about us</h3>
+      </Button>
+      <Button color={"var(--discord)"} href="https://discord.gg/6f7cKxJF">
+        <DiscordLogo size={25} class="action-button-logo" />
+        <h3 class="mb-0">join our discord</h3>
+      </Button>
+    </div>
+  </div>
+  <div class="mockup">
+    <img src="/phone-mockup.png" alt="Commerce app mockup" />
+  </div>
+</main>
+
+<style>
+  main {
+    flex-grow: 1;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: scroll;
+  }
+
+  .content {
+    position: relative;
+    z-index: 10;
+    grid-column: 1 / 5;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30vh;
+  }
+
+  .mockup {
+    position: relative;
+    z-index: 5;
+    grid-column: 4 / -1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+  }
+
+  .mockup img {
+    height: 75vh;
+  }
+
+  .title {
+    max-width: 100%;
+    width: 600px;
+  }
+
+  p {
+    max-width: 100%;
+    width: 600px;
+    margin-bottom: 2em;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.5em;
+    column-gap: 1em;
+  }
+
+  .action-button-logo {
+    margin-right: 0.8em;
+  }
+
+  h3 {
+    font-size: 0.8em;
+  }
+
+  @media screen and (max-width: 700px) {
+    main {
+      grid-template-rows: 1fr auto;
+    }
+
+    .content {
+      grid-column: 1 / -1;
+      grid-row: 1;
+    }
+
+    .mockup {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      width: 100%;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .mockup img {
+      width: 70%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    main {
+      padding: 1em;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+  }
+</style>
