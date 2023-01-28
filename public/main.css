@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@700&display=swap");
 
 :root {
-  --primary: rgb(232, 107, 107);
-  --secondary: rgb(215, 159, 74);
-  --tertiary: rgb(120, 118, 234);
+  --primary: rgb(13,199,216);
+  --secondary: rgb(20,141,199);
+  --tertiary: rgb(22,89,192);
   --text: #2b2a35;
   --discord: #5275ff;
 }
