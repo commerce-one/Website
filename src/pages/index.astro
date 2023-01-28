@@ -2,6 +2,7 @@
 import Button from "../components/button.astro";
 import DiscordLogo from "../components/discord-logo.astro";
 import NotionLogo from "../components/notion-logo.astro";
+import "../styles/main.css";
 ---
 
 <html lang="en">
@@ -10,20 +11,30 @@ import NotionLogo from "../components/notion-logo.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="main.css" />
     <title>Astro</title>
   </head>
   <body>
     <header>
       <h4>Commerce</h4>
       <div class="header-actions">
-        <Button noPadding noShadow href={""}>
+        <Button
+          noPadding
+          noShadow
+          href="https://www.notion.so/Commerce-2952bdbf41e843ed8c40f20fd254a172"
+          borderRadius="8px"
+        >
           <div class="header-button-content">
             <NotionLogo class="header-button-logo" size={20} />
-            <h4 class="mb-0">see our roadmap</h4>
+            <h4 class="mb-0">learn about us</h4>
           </div>
         </Button>
-        <Button color={"var(--discord)"} noPadding noShadow>
+        <Button
+          color={"var(--discord)"}
+          noPadding
+          noShadow
+          href="https://discord.gg/6f7cKxJF"
+          borderRadius="8px"
+        >
           <div class="header-button-content">
             <DiscordLogo class="header-button-logo" size={20} />
             <h4 class="mb-0">join our discord</h4>
@@ -41,11 +52,13 @@ import NotionLogo from "../components/notion-logo.astro";
         relationships, and transact safely.
       </p>
       <div class="actions">
-        <Button>
+        <Button
+          href="https://www.notion.so/Commerce-2952bdbf41e843ed8c40f20fd254a172"
+        >
           <NotionLogo class="action-button-logo" />
-          <h3 class="mb-0">see our roadmap</h3>
+          <h3 class="mb-0">learn about us</h3>
         </Button>
-        <Button color={"var(--discord)"}>
+        <Button color={"var(--discord)"} href="https://discord.gg/6f7cKxJF">
           <DiscordLogo class="action-button-logo" />
           <h3 class="mb-0">join our discord</h3>
         </Button>
@@ -93,12 +106,6 @@ import NotionLogo from "../components/notion-logo.astro";
     align-items: center;
   }
 
-  @media screen and (max-width: 700px) {
-    .header-actions {
-      display: none;
-    }
-  }
-
   header h4,
   header a {
     margin: 0;
@@ -114,6 +121,7 @@ import NotionLogo from "../components/notion-logo.astro";
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    overflow: scroll;
   }
 
   .title {
@@ -124,7 +132,7 @@ import NotionLogo from "../components/notion-logo.astro";
   p {
     max-width: 100%;
     width: 600px;
-    font-size: 1.3em;
+    margin-bottom: 2em;
   }
 
   .actions {
@@ -136,5 +144,25 @@ import NotionLogo from "../components/notion-logo.astro";
 
   .action-button-logo {
     margin-right: 1em;
+  }
+
+  @media screen and (max-width: 700px) {
+    body {
+      background: linear-gradient(
+          to top right,
+          var(--primary) 10%,
+          var(--secondary) 30%,
+          var(--tertiary) 70%
+        )
+        no-repeat;
+    }
+
+    main {
+      padding: 1em;
+    }
+
+    .header-actions {
+      display: none;
+    }
   }
 </style>

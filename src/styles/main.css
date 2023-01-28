@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@700&display=swap");
 
 :root {
-  --primary: rgb(13,199,216);
-  --secondary: rgb(20,141,199);
-  --tertiary: rgb(22,89,192);
+  --primary: rgb(13, 199, 216);
+  --secondary: rgb(20, 193, 199);
+  --tertiary: rgb(38, 103, 202);
   --text: #2b2a35;
   --discord: #5275ff;
 }
@@ -67,4 +67,29 @@ h3 {
 .underline {
   text-decoration: underline;
   text-decoration-thickness: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    word-spacing: -0.6em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  a {
+    font-size: 0.8em;
+  }
 }
