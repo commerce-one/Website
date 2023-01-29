@@ -3,7 +3,8 @@
 :root {
   --primary: rgb(13, 199, 216);
   --secondary: rgb(20, 193, 199);
-  --tertiary: rgb(38, 103, 202);
+  --tertiary: rgb(119, 160, 221);
+  --quaternary: rgb(38, 103, 202);
   --text: #2b2a35;
   --discord: #5275ff;
 }

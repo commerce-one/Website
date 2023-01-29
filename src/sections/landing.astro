@@ -28,26 +28,26 @@ import NotionLogo from "../components/notion-logo.astro";
     </div>
   </div>
   <div class="mockup">
-    <img src="/phone-mockup.png" alt="Commerce app mockup" />
+    <img src="/phone-mockup.png" alt="Phone mockup" />
   </div>
 </main>
 
 <style>
   main {
     flex-grow: 1;
-    padding: 2em;
+    padding: 3em;
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     max-width: 1300px;
     width: 100%;
+    height: 100vh;
     margin: 0 auto;
-    overflow: scroll;
   }
 
   .content {
     position: relative;
     z-index: 10;
-    grid-column: 1 / 5;
+    grid-column: 1 / 4;
     grid-row: 1;
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@ import NotionLogo from "../components/notion-logo.astro";
   }
 
   .mockup img {
-    height: 75vh;
+    width: 90%;
   }
 
   .title {
@@ -98,24 +98,23 @@ import NotionLogo from "../components/notion-logo.astro";
 
   @media screen and (max-width: 700px) {
     main {
-      grid-template-rows: 1fr auto;
+      display: flex;
+      flex-direction: column;
+      height: auto;
     }
 
     .content {
-      grid-column: 1 / -1;
-      grid-row: 1;
+      min-height: 60vh;
     }
 
     .mockup {
-      grid-column: 1 / -1;
-      grid-row: 2;
       width: 100%;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
     }
 
     .mockup img {
-      width: 70%;
+      width: 100%;
       height: 100%;
       object-fit: contain;
     }
@@ -124,6 +123,7 @@ import NotionLogo from "../components/notion-logo.astro";
   @media screen and (max-width: 500px) {
     main {
       padding: 1em;
+      padding-bottom: 5em;
     }
     p {
       margin-bottom: 1em;
