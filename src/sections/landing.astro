@@ -6,6 +6,7 @@ import NotionLogo from "../components/notion-logo.astro";
 
 <main>
   <div class="content">
+    <img class="app-icon" src="/app-icon.png" alt="app icon" />
     <h1 class="title">
       Community Driven <span class="underline">Commerce</span>
     </h1>
@@ -41,8 +42,13 @@ import NotionLogo from "../components/notion-logo.astro";
     grid-template-columns: repeat(6, minmax(0, 1fr));
     max-width: 1300px;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     margin: 0 auto;
+  }
+
+  .logo-text {
+    width: 0.86ch;
+    margin-right: 0.05ch;
   }
 
   .content {
@@ -69,6 +75,12 @@ import NotionLogo from "../components/notion-logo.astro";
 
   .mockup img {
     width: 90%;
+  }
+
+  .app-icon {
+    width: 6em;
+    height: 6em;
+    margin-bottom: 2em;
   }
 
   .title {

@@ -9,6 +9,7 @@
   --discord: #5275ff;
   --background: #fffcf0;
   background-color: var(--background);
+  scroll-behavior: smooth;
 }
 
 *,

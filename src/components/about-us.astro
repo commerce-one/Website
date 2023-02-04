@@ -2,7 +2,8 @@
 import Founder from "./founder.astro";
 ---
 
-<div class="about-us">
+<div class="about-us" id="about-us">
+  <a class="about-us-tag" href="#about-us"></a>
   <div class="about-us-content">
     <h1>Meet the founders</h1>
     <div class="about-us-founders">
@@ -21,7 +22,7 @@ import Founder from "./founder.astro";
       />
       <Founder
         name="Rohan Bansal"
-        bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora earum aperiam quidem, facere tenetur tempore illum eos. Error inventore dolorem ducimus voluptatem non dolor temporibus commodi sed molestias, eius tempore."
+        bio="Hello! I'm a software engineer at Google and super passionate about backend networking systems. I also love spending time with my dog."
         profileSrc="/rohan-pfp.png"
         align="left"
         color="var(--tertiary)"
@@ -32,6 +33,7 @@ import Founder from "./founder.astro";
 
 <style>
   .about-us {
+    position: relative;
     background: var(--background);
     padding: 4em;
     padding-top: 8em;
@@ -41,6 +43,17 @@ import Founder from "./founder.astro";
     border-top: 6px solid var(--text);
     border-left: 6px solid var(--text);
     border-right: 6px solid var(--text);
+  }
+
+  .about-us-tag {
+    position: absolute;
+    top: 1.25em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5em;
+    height: 0.5em;
+    border-radius: 0.5em;
+    background-color: var(--text);
   }
 
   .about-us h1 {
