@@ -1,0 +1,107 @@
+---
+interface Props {
+  name: string;
+  bio: string;
+  profileSrc: string;
+  align?: "left" | "right";
+  color?: string;
+}
+const {
+  name,
+  bio,
+  profileSrc,
+  align,
+  color = "var(--background)",
+} = Astro.props as Props;
+---
+
+<div
+  class:list={[
+    "founder",
+    { alignLeft: align == "left", alignRight: align == "right" },
+  ]}
+>
+  <img src={profileSrc} alt="Profile picture" class="profile-pic" />
+  <h2 class="name">{name}</h2>
+  <p class="bio">{bio}</p>
+</div>
+
+<style define:vars={{ color }}>
+  .founder {
+    display: grid;
+    align-items: flex-start;
+    column-gap: 2em;
+    max-width: 700px;
+    align-self: flex-start;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "pfp name"
+      "pfp bio";
+    padding: 1.5em;
+    background-color: var(--color);
+    border-radius: 15px;
+    border: 6px solid var(--text);
+    box-shadow: 4px 4px 0px var(--text);
+    margin-bottom: 4px;
+    margin-right: 4px;
+  }
+
+  .founder.alignRight {
+    align-self: flex-end;
+  }
+
+  .profile-pic {
+    align-self: center;
+    grid-area: pfp;
+    height: 5em;
+    width: 5em;
+    border-radius: 200px;
+    border: 6px solid var(--text);
+    overflow: hidden;
+  }
+
+  .name {
+    grid-area: name;
+  }
+
+  .bio {
+    grid-area: bio;
+    margin: 0;
+    text-align: justify;
+  }
+
+  @media screen and (max-width: 700px) {
+    .founder {
+      row-gap: 1em;
+      column-gap: 1em;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "pfp name"
+        "bio bio";
+    }
+    .name {
+      align-self: center;
+      font-size: 1.6em;
+    }
+    .profile-pic {
+      height: 4em;
+      width: 4em;
+    }
+    .bio {
+      text-align: start;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .name {
+      align-self: center;
+      font-size: 1.3em;
+    }
+    .profile-pic {
+      height: 4em;
+      width: 4em;
+    }
+  }
+</style>
