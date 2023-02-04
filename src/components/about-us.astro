@@ -1,0 +1,82 @@
+---
+import Founder from "./founder.astro";
+---
+
+<div class="about-us">
+  <div class="about-us-content">
+    <h1>Meet the founders</h1>
+    <div class="about-us-founders">
+      <Founder
+        name="Armstrong Park"
+        bio="Hey! I'm a huge mechanical keyboard nerd and avid programmer. I've worked in web3 as well as the quant space and love building useful things with my friends."
+        profileSrc="/armstrong-pfp.png"
+        align="left"
+      />
+      <Founder
+        name="Marcos Eizayaga"
+        bio="Hiya! I'm big into fashion, and especially with second hand clothes. I'm a software engineer at Microsoft and in charge of all the frontend work at Commerce, from designing mockups to programming the UI."
+        profileSrc="/marcos-pfp.png"
+        align="right"
+        color="var(--primary)"
+      />
+      <Founder
+        name="Rohan Bansal"
+        bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora earum aperiam quidem, facere tenetur tempore illum eos. Error inventore dolorem ducimus voluptatem non dolor temporibus commodi sed molestias, eius tempore."
+        profileSrc="/rohan-pfp.png"
+        align="left"
+        color="var(--tertiary)"
+      />
+    </div>
+  </div>
+</div>
+
+<style>
+  .about-us {
+    background: var(--background);
+    padding: 4em;
+    padding-top: 8em;
+    padding-bottom: 6em;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top: 6px solid var(--text);
+    border-left: 6px solid var(--text);
+    border-right: 6px solid var(--text);
+  }
+
+  .about-us h1 {
+    margin-bottom: 1em;
+  }
+
+  .about-us-content {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .about-us-founders {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  @media screen and (max-width: 700px) {
+    .about-us {
+      padding: 4em 2em;
+    }
+
+    .about-us-founders {
+      gap: 1em;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .about-us {
+      padding: 3em 2em;
+      padding-top: 3em;
+      border-radius: 30px;
+    }
+
+    .about-us h1 {
+      margin-bottom: 1em;
+    }
+  }
+</style>
